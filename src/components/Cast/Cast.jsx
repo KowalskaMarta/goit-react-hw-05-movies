@@ -9,8 +9,6 @@ import { Loader } from '#components/Loader/Loader';
 const Cast = () => {
   const { movieId } = useParams();
   const [credits, setCredits] = useState([]);
-  // const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
   const [loader, setLoader] = useState(false);
 
   useEffect(() => {
@@ -19,11 +17,8 @@ const Cast = () => {
       try {
         const creditsResponse = await getMovieCredits(movieId);
         setCredits(creditsResponse.cast);
-        // setLoading(false);
       } catch (error) {
         console.error('Error fetching movie details:', error);
-        setError('Error fetching movie details. Please try again later.');
-        // setLoading(false);
       } finally {
         setLoader(false);
       }

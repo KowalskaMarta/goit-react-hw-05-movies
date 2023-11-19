@@ -1,6 +1,5 @@
-// components/MovieDetails/MovieDetails.js
-import React, { useEffect, useState, Suspense } from 'react'; // to jest ok :)
-import { useParams, Link, useLocation, Outlet } from 'react-router-dom'; //brakuje hooka useLocation dla go-back
+import React, { useEffect, useState, Suspense } from 'react';
+import { useParams, Link, useLocation, Outlet } from 'react-router-dom'; 
 import { getMovieDetailsByID } from '#services/api';
 
 import css from './MovieDetails.module.css';
@@ -8,8 +7,6 @@ import css from './MovieDetails.module.css';
 const MovieDetails = () => {
   const { movieId } = useParams();
   const [movieDetails, setMovieDetails] = useState({});
-  const [credits, setCredits] = useState([]);
-  const [reviews, setReviews] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
@@ -85,13 +82,8 @@ const MovieDetails = () => {
         <Outlet />
        </Suspense>
 
-      {/* <Cast cast={credits} />  nie podoba mi się */}
-      {/* <Reviews reviews={reviews} /> nie podoba mi się */}
     </div>
   );
 };
-
-// MovieDetails.Cast = Cast;
-// MovieDetails.Reviews = Reviews;
 
 export default MovieDetails;

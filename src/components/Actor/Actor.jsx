@@ -12,7 +12,7 @@ export const Actor = ({ name, character, profile_path }) => {
   return (
     <>
    
-      <img className={css.castImg} src={photoActor} />
+      <img className={css.castImg} src={photoActor} alt={name} />
       <div className={css.castActor__Desc}>
       <p className={css.castActor__Name}>{name}</p>
       <p className={css.castActor__Character}>Character: {character}</p>

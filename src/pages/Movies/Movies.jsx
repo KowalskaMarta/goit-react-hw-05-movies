@@ -10,7 +10,6 @@ const Movies = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const moviesName = searchParams.get('query') ?? '';
   const [movies, setMovies] = useState();
-  const [error, setError] = useState();
   const [loader, setLoader] = useState(false);
 
   const handleOnSubmit = query => {
@@ -26,7 +25,6 @@ const Movies = () => {
         const response = await fetchMovieByKeyword(moviesName);
         setMovies(response);
       } catch (err) {
-        setError(err.message);
         console.log(err.message);
       } finally {
         setLoader(false);
