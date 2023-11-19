@@ -1,6 +1,6 @@
 import PropTypes from 'prop-types';
 import React, { useEffect, useState } from 'react';
-import { useParams, Link, useLocation } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { getMovieCredits } from '#services/api';
 import { Actor } from '#components/Actor/Actor';
 import css from './Cast.module.css';
