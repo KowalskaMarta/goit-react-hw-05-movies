@@ -8,7 +8,6 @@ const Reviews = () => {
   const { movieId } = useParams();
   const [reviews, setReviews] = useState([]);
   const [loader, setLoader] = useState(false);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
     const fetchMovieDetails = async () => {
@@ -18,7 +17,6 @@ const Reviews = () => {
         setReviews(reviewsResponse.results);
       } catch (error) {
         console.error('Error fetching movie details:', error);
-        setError('Error fetching movie details. Please try again later.');
       } finally {
         setLoader(false);
       }
