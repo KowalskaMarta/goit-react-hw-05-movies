@@ -1,0 +1,24 @@
+.mainContainer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color:  rgb(50, 50, 50);
+  }
+  
+  .mainNavigation {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 15px;
+  }
+  
+  .mainLink {
+    margin: 20px 0;
+    cursor: pointer;
+    padding: 10px 16px;
+    font-size: 20px;
+    font-weight: 700;
+    text-decoration: none;
+    color: #e51b36;
+    border: 2px solid #e51b36;
+    border-radius: 4px;
+  }
