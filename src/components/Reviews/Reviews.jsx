@@ -1,7 +1,6 @@
-// components/MovieDetails/Reviews.js
 import PropTypes from 'prop-types';
-import React, { useEffect, useState } from 'react'; // to jest ok :)
-import { useParams } from 'react-router-dom'; //brakuje hooka useLocation dla go-back
+import React, { useEffect, useState } from 'react';
+import { useParams } from 'react-router-dom';
 import { getMovieReviews } from '#services/api';
 import { Loader } from '#components/Loader/Loader';
 
@@ -33,7 +32,6 @@ const Reviews = () => {
       {loader && <Loader />}
       <div>
         <h2>Reviews</h2>
-        {/* Display reviews */}
 
         <ul>
           {reviews.map(review => (
